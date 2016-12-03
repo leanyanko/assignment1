@@ -15,7 +15,7 @@
 
             console.log(mealAmount);
             if (mealAmount == 0)
-                msg = "Field is empty";
+                msg = "Please enter data first";
             else if (mealAmount >3)
                 msg = "Too much";
 
@@ -28,9 +28,11 @@
         var amount = 0;
         var meals = string.split(',');
 
+//code to handle a case where there is no item between some commas
         amount = meals.length;
         for (var i = 0; i < meals.length; i++)
             if (meals[i].trim() === '') amount--;
+
         return amount;
     }
 
